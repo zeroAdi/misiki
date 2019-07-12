@@ -45,7 +45,7 @@ export default class FoodItems extends Component {
                
                <Image style={styles.image1} source={{uri: img}} resizeMode='contain'/>
                <Text>{name}</Text>
-               <Text>{rate}</Text>
+               <Text>₹{rate}</Text>
                <Text>{restaurant}</Text>
                <Text>{stock}</Text>
                <Text>{time}</Text>
