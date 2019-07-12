@@ -46,8 +46,16 @@ export default class FoodItems extends Component {
                <Image style={styles.image1} source={{uri: img}} resizeMode='contain'/>
                <Text>{name}</Text>
                <Text>{rate}</Text>
-               <Text>{restaurant}</Text>
-               <Text>{stock}</Text>
+         <View style={styles.top1}>
+                        <Text style={styles.slugStyle}>
+                          {restaurant}
+                        </Text>
+                        <Text style={styles.stockStyle}>
+                            Only {stock} left
+                          </Text>
+                        
+              </View>
+               
                <Text>{time}</Text>
                <Text>{type}</Text>
                              
@@ -135,10 +143,32 @@ const styles = StyleSheet.create({
       fontSize: 25,
       textAlign: 'center'
     },
+ top1:{
+    height:'10%',
+    width:'100%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    backgroundColor: 'grey',
+  },
     image1:{
       height: 300,
       width: '100%',
         },
+  slugStyle:{
+    
+      fontSize:18,
+      padding:20,
+      textAlign:"left",
+      color:'red',
+      
+    
+  },
+ stockStyle:{
+    fontSize:15,
+    padding:20,
+    textAlign:"right",
+     alignItems:"flex-end",
+  },
     inc_style: {
         borderWidth:1,
         borderColor:'rgba(0,0,0,0.2)',
